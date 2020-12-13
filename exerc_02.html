@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JAVASCRIPT</title>
+        <link rel='stylesheet' type='text/css' href='./style.css'>
+<script>
+
+nome = prompt('Name : ')
+height = prompt('Height: ')
+weight = prompt('Weight: ')
+
+weight = parseFloat(weight)
+height = parseFloat(height)
+
+converser_height = height/100
+
+imc = weight/(converser_height**2)
+
+
+if (imc <= 16){
+    document.write('<h1>'+nome+', Possui o índice de massa corporal igual a '+imc+'| Classificação Baixo peso muito grave </h1>')
+} else if (imc > 16 || imc <= 16.99) {
+    document.write('<h1>'+nome+', Possui o índice de massa corporal igual a '+imc+'| Classificação Baixo peso grave </h1>')
+} else if (imc > 17 || imc <= 18.99){
+    document.write('<h1>'+nome+', Possui o índice de massa corporal igual a '+imc+'| Classificação Baixo peso </h1>')
+} else if (imc > 18.50 || imc <= 24.99) {
+    document.write('<h1>'+nome+', Possui o índice de massa corporal igual a '+imc+'| Classificação Peso normal </h1>')
+} else if (imc > 25 || imc <= 29.99){
+    document.write('<h1>'+nome+', Possui o índice de massa corporal igual a '+imc+'| Classificação Sobre Peso </h1>')
+} else if (imc > 30 || imc <= 34.99){
+    document.write('<h1>'+nome+', Possui o índice de massa corporal igual a '+imc+'| Classificação Obesidade Grau I    </h1>')
+} else if (imc > 35 || imc <= 39.99) {
+    document.write('<h1>'+nome+', Possui o índice de massa corporal igual a '+imc+'| Classificação Obesidade grau II   </h1>')
+} else if (imc >= 40) {
+    document.write('<h1>'+nome+', Possui o índice de massa corporal igual a '+imc+'| Classificação Obesidade grau III  </h1>')
+}
+
+
+</script>
+    </head>
+
+    <body>
+        <div id='titulo'>
+            <h1>IMC</h1>
+        </div>        
+    </body>
+</html>
